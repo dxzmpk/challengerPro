@@ -39,6 +39,17 @@ public class CountryMapperTest {
         }
     }
 
+    @Test
+    public void testSelectOneById(){
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+        try{
+            List<Country> countryList = sqlSession.selectList("selectOneById");
+            printCountryList(countryList);
+        } finally {
+            sqlSession.close();
+        }
+    }
+
     private void printCountryList(List<Country> countryList){
         for(Country country : countryList){
             System.out.println(country.toString());
