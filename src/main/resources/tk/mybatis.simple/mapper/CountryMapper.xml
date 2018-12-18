@@ -8,6 +8,8 @@
     </select>
 
     <select id="selectOneById" resultType="Country">
-        select id,countryname,countrycode from country where id = 3
+        select id,countryname,countrycode from country where id = #{id}
     </select>
+
+
 </mapper>
