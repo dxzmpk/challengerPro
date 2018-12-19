@@ -18,15 +18,15 @@
                         password="">
         </jdbcConnection>
 
-        <javaModelGenerator targetPackage="test.model" targetProject="src\main\java">
+        <javaModelGenerator targetPackage="tk.mybatis.simple.model" targetProject="src\main\java">
             <property name="trimStrings" value="true"/>
         </javaModelGenerator>
 
-        <sqlMapGenerator targetPackage="test.xml" targetProject="src\main\resources"/>
+        <sqlMapGenerator targetPackage="tk.mybatis.simple.mapper" targetProject="src\main\resources"/>
 
-        <javaClientGenerator type="XMLMAPPER" targetPackage="test.dao" targetProject="src\main\java"/>
+        <javaClientGenerator type="XMLMAPPER" targetPackage="tk.mybatis.simple.mapper" targetProject="src\main\java"/>
 
-        <table tableName="%">
+        <table tableName="sys_%" >
             <generatedKey column="id" sqlStatement="MySql"/>
         </table>
 

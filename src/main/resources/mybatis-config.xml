@@ -28,5 +28,7 @@
 
     <mappers>
         <mapper resource="tk/mybatis.simple/mapper/CountryMapper.xml"/>
+        <package name="tk.mybatis.simple.mapper"/>
+        <package name="test.dao"/>
     </mappers>
 </configuration>
